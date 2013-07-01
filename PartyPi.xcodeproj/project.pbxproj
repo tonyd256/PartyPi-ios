@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A21FFEBC4BC049868F3D8B7F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0C3D004A70467FB3936F63 /* libPods.a */; };
+		EA44BF2A177C9AE4004B58BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44BF29177C9AE4004B58BB /* UIKit.framework */; };
+		EA44BF2C177C9AE4004B58BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44BF2B177C9AE4004B58BB /* Foundation.framework */; };
+		EA44BF2E177C9AE4004B58BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44BF2D177C9AE4004B58BB /* CoreGraphics.framework */; };
+		EA44BF34177C9AE4004B58BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF32177C9AE4004B58BB /* InfoPlist.strings */; };
+		EA44BF36177C9AE4004B58BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF35177C9AE4004B58BB /* main.m */; };
+		EA44BF3A177C9AE4004B58BB /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF39177C9AE4004B58BB /* PPAppDelegate.m */; };
+		EA44BF3C177C9AE4004B58BB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF3B177C9AE4004B58BB /* Default.png */; };
+		EA44BF3E177C9AE4004B58BB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF3D177C9AE4004B58BB /* Default@2x.png */; };
+		EA44BF40177C9AE4004B58BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF3F177C9AE4004B58BB /* Default-568h@2x.png */; };
+		EA44BF43177C9AE4004B58BB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF41177C9AE4004B58BB /* MainStoryboard.storyboard */; };
+		EA44BF4E177E0DD0004B58BB /* PPJukeboxesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF4D177E0DD0004B58BB /* PPJukeboxesViewController.m */; };
+		EA44BF51177E0F2F004B58BB /* PPUDPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF50177E0F2F004B58BB /* PPUDPClient.m */; };
+		EA44BF54177E286B004B58BB /* PPNowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF53177E286B004B58BB /* PPNowPlayingViewController.m */; };
+		EA44BF5D177E2F9C004B58BB /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF57177E2F9C004B58BB /* FAImageView.m */; };
+		EA44BF5E177E2F9C004B58BB /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF58177E2F9C004B58BB /* FontAwesome.ttf */; };
+		EA44BF5F177E2F9C004B58BB /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF5A177E2F9C004B58BB /* NSString+FontAwesome.m */; };
+		EA44BF60177E2F9C004B58BB /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF5C177E2F9C004B58BB /* UIFont+FontAwesome.m */; };
+		EA44BF741780B899004B58BB /* exclamation-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF731780B899004B58BB /* exclamation-sign.png */; };
+		EAE5EF5C17810F2A0091940B /* exclamation-sign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE5EF5B17810F2A0091940B /* exclamation-sign@2x.png */; };
+		EAE5EF5F17810F5A0091940B /* PPSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EF5E17810F5A0091940B /* PPSearchViewController.m */; };
+		EAE5EF621781203C0091940B /* PPSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EF611781203C0091940B /* PPSongViewController.m */; };
+		EAE5EF65178127F80091940B /* PPPlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EF64178127F80091940B /* PPPlaylistsViewController.m */; };
+		EAE5EF68178129EB0091940B /* PPPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EF67178129EB0091940B /* PPPlaylistViewController.m */; };
+		EAE5EF6B1781AA3E0091940B /* PPCurrentPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EF6A1781AA3E0091940B /* PPCurrentPlaylistViewController.m */; };
+		EAE5EF6D17822F1A0091940B /* private.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAE5EF6C17822F1A0091940B /* private.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B36A18069D04EBD88AAE8DC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7B0C3D004A70467FB3936F63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA44BF26177C9AE4004B58BB /* PartyPi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyPi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA44BF29177C9AE4004B58BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA44BF2B177C9AE4004B58BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA44BF2D177C9AE4004B58BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA44BF31177C9AE4004B58BB /* PartyPi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PartyPi-Info.plist"; sourceTree = "<group>"; };
+		EA44BF33177C9AE4004B58BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA44BF35177C9AE4004B58BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA44BF37177C9AE4004B58BB /* PartyPi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PartyPi-Prefix.pch"; sourceTree = "<group>"; };
+		EA44BF38177C9AE4004B58BB /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
+		EA44BF39177C9AE4004B58BB /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
+		EA44BF3B177C9AE4004B58BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EA44BF3D177C9AE4004B58BB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EA44BF3F177C9AE4004B58BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EA44BF42177C9AE4004B58BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EA44BF4C177E0DD0004B58BB /* PPJukeboxesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJukeboxesViewController.h; sourceTree = "<group>"; };
+		EA44BF4D177E0DD0004B58BB /* PPJukeboxesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPJukeboxesViewController.m; sourceTree = "<group>"; };
+		EA44BF4F177E0F2F004B58BB /* PPUDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUDPClient.h; sourceTree = "<group>"; };
+		EA44BF50177E0F2F004B58BB /* PPUDPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUDPClient.m; sourceTree = "<group>"; };
+		EA44BF52177E286B004B58BB /* PPNowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNowPlayingViewController.h; sourceTree = "<group>"; };
+		EA44BF53177E286B004B58BB /* PPNowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNowPlayingViewController.m; sourceTree = "<group>"; };
+		EA44BF56177E2F9C004B58BB /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
+		EA44BF57177E2F9C004B58BB /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
+		EA44BF58177E2F9C004B58BB /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		EA44BF59177E2F9C004B58BB /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		EA44BF5A177E2F9C004B58BB /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		EA44BF5B177E2F9C004B58BB /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		EA44BF5C177E2F9C004B58BB /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		EA44BF731780B899004B58BB /* exclamation-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation-sign.png"; sourceTree = "<group>"; };
+		EAE5EF5B17810F2A0091940B /* exclamation-sign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation-sign@2x.png"; sourceTree = "<group>"; };
+		EAE5EF5D17810F5A0091940B /* PPSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSearchViewController.h; sourceTree = "<group>"; };
+		EAE5EF5E17810F5A0091940B /* PPSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSearchViewController.m; sourceTree = "<group>"; };
+		EAE5EF601781203B0091940B /* PPSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSongViewController.h; sourceTree = "<group>"; };
+		EAE5EF611781203C0091940B /* PPSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSongViewController.m; sourceTree = "<group>"; };
+		EAE5EF63178127F80091940B /* PPPlaylistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaylistsViewController.h; sourceTree = "<group>"; };
+		EAE5EF64178127F80091940B /* PPPlaylistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaylistsViewController.m; sourceTree = "<group>"; };
+		EAE5EF66178129EB0091940B /* PPPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaylistViewController.h; sourceTree = "<group>"; };
+		EAE5EF67178129EB0091940B /* PPPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaylistViewController.m; sourceTree = "<group>"; };
+		EAE5EF691781AA3E0091940B /* PPCurrentPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCurrentPlaylistViewController.h; sourceTree = "<group>"; };
+		EAE5EF6A1781AA3E0091940B /* PPCurrentPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCurrentPlaylistViewController.m; sourceTree = "<group>"; };
+		EAE5EF6C17822F1A0091940B /* private.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = private.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA44BF23177C9AE4004B58BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA44BF2A177C9AE4004B58BB /* UIKit.framework in Frameworks */,
+				EA44BF2C177C9AE4004B58BB /* Foundation.framework in Frameworks */,
+				EA44BF2E177C9AE4004B58BB /* CoreGraphics.framework in Frameworks */,
+				A21FFEBC4BC049868F3D8B7F /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA44BF1D177C9AE4004B58BB = {
+			isa = PBXGroup;
+			children = (
+				EA44BF2F177C9AE4004B58BB /* PartyPi */,
+				EA44BF28177C9AE4004B58BB /* Frameworks */,
+				EA44BF27177C9AE4004B58BB /* Products */,
+				3B36A18069D04EBD88AAE8DC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		EA44BF27177C9AE4004B58BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA44BF26177C9AE4004B58BB /* PartyPi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA44BF28177C9AE4004B58BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA44BF29177C9AE4004B58BB /* UIKit.framework */,
+				EA44BF2B177C9AE4004B58BB /* Foundation.framework */,
+				EA44BF2D177C9AE4004B58BB /* CoreGraphics.framework */,
+				7B0C3D004A70467FB3936F63 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA44BF2F177C9AE4004B58BB /* PartyPi */ = {
+			isa = PBXGroup;
+			children = (
+				EA44BF55177E2F9C004B58BB /* FontAwesome */,
+				EA44BF721780B899004B58BB /* images */,
+				EA44BF38177C9AE4004B58BB /* PPAppDelegate.h */,
+				EA44BF39177C9AE4004B58BB /* PPAppDelegate.m */,
+				EA44BF41177C9AE4004B58BB /* MainStoryboard.storyboard */,
+				EA44BF30177C9AE4004B58BB /* Supporting Files */,
+				EA44BF4C177E0DD0004B58BB /* PPJukeboxesViewController.h */,
+				EA44BF4D177E0DD0004B58BB /* PPJukeboxesViewController.m */,
+				EA44BF4F177E0F2F004B58BB /* PPUDPClient.h */,
+				EA44BF50177E0F2F004B58BB /* PPUDPClient.m */,
+				EA44BF52177E286B004B58BB /* PPNowPlayingViewController.h */,
+				EA44BF53177E286B004B58BB /* PPNowPlayingViewController.m */,
+				EAE5EF5D17810F5A0091940B /* PPSearchViewController.h */,
+				EAE5EF5E17810F5A0091940B /* PPSearchViewController.m */,
+				EAE5EF601781203B0091940B /* PPSongViewController.h */,
+				EAE5EF611781203C0091940B /* PPSongViewController.m */,
+				EAE5EF63178127F80091940B /* PPPlaylistsViewController.h */,
+				EAE5EF64178127F80091940B /* PPPlaylistsViewController.m */,
+				EAE5EF66178129EB0091940B /* PPPlaylistViewController.h */,
+				EAE5EF67178129EB0091940B /* PPPlaylistViewController.m */,
+				EAE5EF691781AA3E0091940B /* PPCurrentPlaylistViewController.h */,
+				EAE5EF6A1781AA3E0091940B /* PPCurrentPlaylistViewController.m */,
+			);
+			path = PartyPi;
+			sourceTree = "<group>";
+		};
+		EA44BF30177C9AE4004B58BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA44BF31177C9AE4004B58BB /* PartyPi-Info.plist */,
+				EA44BF32177C9AE4004B58BB /* InfoPlist.strings */,
+				EA44BF35177C9AE4004B58BB /* main.m */,
+				EA44BF37177C9AE4004B58BB /* PartyPi-Prefix.pch */,
+				EA44BF3B177C9AE4004B58BB /* Default.png */,
+				EA44BF3D177C9AE4004B58BB /* Default@2x.png */,
+				EA44BF3F177C9AE4004B58BB /* Default-568h@2x.png */,
+				EAE5EF6C17822F1A0091940B /* private.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA44BF55177E2F9C004B58BB /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				EA44BF56177E2F9C004B58BB /* FAImageView.h */,
+				EA44BF57177E2F9C004B58BB /* FAImageView.m */,
+				EA44BF58177E2F9C004B58BB /* FontAwesome.ttf */,
+				EA44BF59177E2F9C004B58BB /* NSString+FontAwesome.h */,
+				EA44BF5A177E2F9C004B58BB /* NSString+FontAwesome.m */,
+				EA44BF5B177E2F9C004B58BB /* UIFont+FontAwesome.h */,
+				EA44BF5C177E2F9C004B58BB /* UIFont+FontAwesome.m */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		EA44BF721780B899004B58BB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EAE5EF5B17810F2A0091940B /* exclamation-sign@2x.png */,
+				EA44BF731780B899004B58BB /* exclamation-sign.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA44BF25177C9AE4004B58BB /* PartyPi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA44BF49177C9AE4004B58BB /* Build configuration list for PBXNativeTarget "PartyPi" */;
+			buildPhases = (
+				BBC28F7FD81B49C6B9485338 /* Check Pods Manifest.lock */,
+				EA44BF22177C9AE4004B58BB /* Sources */,
+				EA44BF23177C9AE4004B58BB /* Frameworks */,
+				EA44BF24177C9AE4004B58BB /* Resources */,
+				82E1835A2E39428E82C774EC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartyPi;
+			productName = PartyPi;
+			productReference = EA44BF26177C9AE4004B58BB /* PartyPi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA44BF1E177C9AE4004B58BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Tony DiPasquale";
+			};
+			buildConfigurationList = EA44BF21177C9AE4004B58BB /* Build configuration list for PBXProject "PartyPi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA44BF1D177C9AE4004B58BB;
+			productRefGroup = EA44BF27177C9AE4004B58BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA44BF25177C9AE4004B58BB /* PartyPi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA44BF24177C9AE4004B58BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA44BF34177C9AE4004B58BB /* InfoPlist.strings in Resources */,
+				EA44BF3C177C9AE4004B58BB /* Default.png in Resources */,
+				EA44BF3E177C9AE4004B58BB /* Default@2x.png in Resources */,
+				EA44BF40177C9AE4004B58BB /* Default-568h@2x.png in Resources */,
+				EA44BF43177C9AE4004B58BB /* MainStoryboard.storyboard in Resources */,
+				EA44BF5E177E2F9C004B58BB /* FontAwesome.ttf in Resources */,
+				EA44BF741780B899004B58BB /* exclamation-sign.png in Resources */,
+				EAE5EF5C17810F2A0091940B /* exclamation-sign@2x.png in Resources */,
+				EAE5EF6D17822F1A0091940B /* private.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82E1835A2E39428E82C774EC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		BBC28F7FD81B49C6B9485338 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA44BF22177C9AE4004B58BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA44BF36177C9AE4004B58BB /* main.m in Sources */,
+				EA44BF3A177C9AE4004B58BB /* PPAppDelegate.m in Sources */,
+				EA44BF4E177E0DD0004B58BB /* PPJukeboxesViewController.m in Sources */,
+				EA44BF51177E0F2F004B58BB /* PPUDPClient.m in Sources */,
+				EA44BF54177E286B004B58BB /* PPNowPlayingViewController.m in Sources */,
+				EA44BF5D177E2F9C004B58BB /* FAImageView.m in Sources */,
+				EA44BF5F177E2F9C004B58BB /* NSString+FontAwesome.m in Sources */,
+				EA44BF60177E2F9C004B58BB /* UIFont+FontAwesome.m in Sources */,
+				EAE5EF5F17810F5A0091940B /* PPSearchViewController.m in Sources */,
+				EAE5EF621781203C0091940B /* PPSongViewController.m in Sources */,
+				EAE5EF65178127F80091940B /* PPPlaylistsViewController.m in Sources */,
+				EAE5EF68178129EB0091940B /* PPPlaylistViewController.m in Sources */,
+				EAE5EF6B1781AA3E0091940B /* PPCurrentPlaylistViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA44BF32177C9AE4004B58BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA44BF33177C9AE4004B58BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA44BF41177C9AE4004B58BB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA44BF42177C9AE4004B58BB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA44BF47177C9AE4004B58BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA44BF48177C9AE4004B58BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA44BF4A177C9AE4004B58BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B36A18069D04EBD88AAE8DC /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyPi/PartyPi-Prefix.pch";
+				INFOPLIST_FILE = "PartyPi/PartyPi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA44BF4B177C9AE4004B58BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B36A18069D04EBD88AAE8DC /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartyPi/PartyPi-Prefix.pch";
+				INFOPLIST_FILE = "PartyPi/PartyPi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA44BF21177C9AE4004B58BB /* Build configuration list for PBXProject "PartyPi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA44BF47177C9AE4004B58BB /* Debug */,
+				EA44BF48177C9AE4004B58BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA44BF49177C9AE4004B58BB /* Build configuration list for PBXNativeTarget "PartyPi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA44BF4A177C9AE4004B58BB /* Debug */,
+				EA44BF4B177C9AE4004B58BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA44BF1E177C9AE4004B58BB /* Project object */;
+}
