@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="Tgz-sO-gea" customClass="PPJukeboxesViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dI2-bi-owA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -51,12 +51,12 @@
             <objects>
                 <viewController id="Kk9-8d-kBY" customClass="PPNowPlayingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="59o-on-3Gz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qzb-Gx-ndE" customClass="FAImageView">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="Kxx-e1-S3r"/>
+                                    <constraint firstAttribute="height" constant="280" id="aSD-Hg-TDO"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-K0-imz">
@@ -66,7 +66,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist - Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9v-6Y-yMS">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="274" id="MwC-oe-bf8"/>
+                                    <constraint firstAttribute="width" constant="274" id="I1T-Mn-7uQ"/>
                                     <constraint firstAttribute="height" constant="21" id="vXp-IW-v8M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -91,6 +91,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WBj-PN-Fnt"/>
+                                    <barButtonItem title="Item" id="2Jd-k7-yDh">
+                                        <connections>
+                                            <segue destination="YS8-Za-UGX" kind="push" id="l5c-Yx-1DQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Item" id="zzE-4Q-Mqf">
                                         <connections>
                                             <action selector="volumeDownAction:" destination="Kk9-8d-kBY" id="BQo-ly-Mry"/>
@@ -135,69 +140,23 @@
                                     <segue destination="YS8-Za-UGX" kind="push" id="JZQ-Q4-bdj"/>
                                 </connections>
                             </button>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEJ-Tn-d8I">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjC-ZU-yFp">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="qDz-o1-Vkl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" title="Vote To Skip">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="dislikeButtonAction:" destination="Kk9-8d-kBY" eventType="touchUpInside" id="oeb-wT-IUT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHO-uY-B59">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="4CU-Gz-Odg"/>
-                                            <constraint firstAttribute="width" constant="100" id="BWo-NF-bRe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="View Playlist">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="YS8-Za-UGX" kind="push" id="djm-2t-VKJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="dHO-uY-B59" firstAttribute="bottom" secondItem="mjC-ZU-yFp" secondAttribute="bottom" type="default" id="3IO-Sf-vrE"/>
-                                    <constraint firstItem="dHO-uY-B59" firstAttribute="leading" secondItem="SEJ-Tn-d8I" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Bh6-fI-y7L"/>
-                                    <constraint firstAttribute="trailing" secondItem="mjC-ZU-yFp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LMd-Tu-DPH"/>
-                                    <constraint firstItem="dHO-uY-B59" firstAttribute="top" secondItem="mjC-ZU-yFp" secondAttribute="top" type="default" id="Qvn-SF-aby"/>
-                                    <constraint firstItem="mjC-ZU-yFp" firstAttribute="centerY" secondItem="SEJ-Tn-d8I" secondAttribute="centerY" type="default" id="TiT-mu-70r"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0lA-K0-imz" firstAttribute="top" secondItem="qzb-Gx-ndE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0Y2-y7-t86"/>
-                            <constraint firstItem="fYH-T7-4N7" firstAttribute="baseline" secondItem="s24-7L-m4k" secondAttribute="baseline" type="default" id="0zv-9Y-eC4"/>
                             <constraint firstItem="HPy-gb-JYx" firstAttribute="trailing" secondItem="59o-on-3Gz" secondAttribute="trailing" type="default" id="1u9-Bd-zhN"/>
                             <constraint firstItem="HPy-gb-JYx" firstAttribute="bottom" secondItem="59o-on-3Gz" secondAttribute="bottom" type="default" id="2Ed-dl-2oS"/>
-                            <constraint firstAttribute="trailing" secondItem="SEJ-Tn-d8I" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Bof-RZ-NDH"/>
+                            <constraint firstItem="fYH-T7-4N7" firstAttribute="top" secondItem="w9v-6Y-yMS" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="7hZ-Te-oHG"/>
                             <constraint firstItem="qzb-Gx-ndE" firstAttribute="top" secondItem="59o-on-3Gz" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Dx4-5M-DD6"/>
-                            <constraint firstItem="SEJ-Tn-d8I" firstAttribute="top" secondItem="59o-on-3Gz" secondAttribute="top" constant="250" id="EpQ-wA-rQr"/>
-                            <constraint firstItem="fYH-T7-4N7" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JTD-63-by4"/>
                             <constraint firstAttribute="trailing" secondItem="qzb-Gx-ndE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MwS-Jx-gUB"/>
                             <constraint firstItem="0lA-K0-imz" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QxV-3R-htg"/>
                             <constraint firstAttribute="trailing" secondItem="s24-7L-m4k" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rsp-zX-7AH"/>
                             <constraint firstItem="HPy-gb-JYx" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" type="default" id="Sjg-zj-rCb"/>
-                            <constraint firstItem="SEJ-Tn-d8I" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XY4-F6-fCY"/>
                             <constraint firstAttribute="trailing" secondItem="w9v-6Y-yMS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fu8-yB-aMj"/>
                             <constraint firstItem="qzb-Gx-ndE" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hnk-pE-pUX"/>
-                            <constraint firstItem="0lA-K0-imz" firstAttribute="top" secondItem="SEJ-Tn-d8I" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ljX-Nx-rDG"/>
+                            <constraint firstItem="fYH-T7-4N7" firstAttribute="baseline" secondItem="s24-7L-m4k" secondAttribute="baseline" type="default" id="ibN-R9-emv"/>
+                            <constraint firstItem="fYH-T7-4N7" firstAttribute="leading" secondItem="59o-on-3Gz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mj0-up-F7B"/>
                             <constraint firstAttribute="trailing" secondItem="0lA-K0-imz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rlo-Pf-I1L"/>
-                            <constraint firstAttribute="bottom" secondItem="fYH-T7-4N7" secondAttribute="bottom" constant="56" id="xFm-3I-QgA"/>
                             <constraint firstItem="w9v-6Y-yMS" firstAttribute="top" secondItem="0lA-K0-imz" secondAttribute="bottom" constant="1" type="user" id="xSN-Qz-Qjx"/>
                         </constraints>
                     </view>
@@ -212,12 +171,12 @@
                         <outlet property="dislikeButton" destination="s24-7L-m4k" id="fxR-iu-8tK"/>
                         <outlet property="pauseButton" destination="8kx-5y-3qR" id="DMv-Vr-Kg3"/>
                         <outlet property="playButton" destination="iuv-Tn-vmC" id="mGN-nh-DTX"/>
+                        <outlet property="playlistBarButton" destination="2Jd-k7-yDh" id="1o9-bh-G9S"/>
                         <outlet property="playlistButton" destination="fYH-T7-4N7" id="hzd-Xi-jf8"/>
                         <outlet property="toolbar" destination="HPy-gb-JYx" id="U9o-MM-E7K"/>
                         <outlet property="trackArtistAlbum" destination="w9v-6Y-yMS" id="5XX-nE-BnA"/>
                         <outlet property="trackImage" destination="qzb-Gx-ndE" id="gOR-gJ-JdS"/>
                         <outlet property="trackTitle" destination="0lA-K0-imz" id="2PE-BO-Exv"/>
-                        <outlet property="userView" destination="SEJ-Tn-d8I" id="bTE-4a-cbY"/>
                         <outlet property="volumeDownButton" destination="zzE-4Q-Mqf" id="WcO-VS-3yf"/>
                         <outlet property="volumeToolbar" destination="HPy-gb-JYx" id="HYK-Ty-rcn"/>
                         <outlet property="volumeUpButton" destination="K1A-Cy-x00" id="uCY-du-D3Z"/>
@@ -232,7 +191,7 @@
             <objects>
                 <tableViewController id="YS8-Za-UGX" customClass="PPCurrentPlaylistViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y5X-lO-3wp">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -280,7 +239,7 @@
             <objects>
                 <viewController id="ihb-tH-X0j" customClass="PPSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mr-FK-q3Z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-4G-9aW">
@@ -365,7 +324,7 @@
             <objects>
                 <viewController title="Track" id="WG1-dd-aVZ" customClass="PPSongViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="odb-T8-KwI">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="raV-SU-XsH" customClass="FAImageView">
@@ -423,7 +382,7 @@
             <objects>
                 <tableViewController id="D9l-BS-GKx" customClass="PPPlaylistsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4dU-vv-xnh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -463,7 +422,7 @@
             <objects>
                 <tableViewController id="Gdq-nb-l9U" customClass="PPPlaylistViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0sK-VT-eaZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -556,12 +515,12 @@
                 <relationship kind="outlet" name="dislikeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="pauseButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="playButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="playlistBarButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="playlistButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
                 <relationship kind="outlet" name="trackArtistAlbum" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="trackImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="trackTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="volumeDownButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="volumeToolbar" candidateClass="UIToolbar"/>
                 <relationship kind="outlet" name="volumeUpButton" candidateClass="UIBarButtonItem"/>
@@ -596,10 +555,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="djm-2t-VKJ"/>
+        <segue reference="l5c-Yx-1DQ"/>
         <segue reference="4iA-Iv-u4g"/>
     </inferredMetricsTieBreakers>
 </document>

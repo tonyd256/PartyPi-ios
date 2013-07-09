@@ -70,8 +70,8 @@
     static NSString *CellIdentifier = @"SubtitleCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [[tracks objectAtIndex:indexPath.row] valueForKey:@"title"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", [[tracks objectAtIndex:indexPath.row] objectForKey:@"artist"], [[tracks objectAtIndex:indexPath.row] valueForKey:@"album"]];
+    [cell.textLabel setText:[[tracks objectAtIndex:indexPath.row] valueForKey:@"title"]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@ - %@", [[tracks objectAtIndex:indexPath.row] objectForKey:@"artist"], [[tracks objectAtIndex:indexPath.row] valueForKey:@"album"]]];
     
     return cell;
 }

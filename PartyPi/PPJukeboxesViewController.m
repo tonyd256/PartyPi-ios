@@ -96,8 +96,16 @@
         return;
     }
     [PPUDPClient sharedClient].ip = [[jukeboxes objectAtIndex:indexPath.row] valueForKey:@"ip"];
+    selectedIndex = indexPath.row;
     
     [self performSegueWithIdentifier:@"NowPlayingSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"NowPlayingSegue"]) {
+        PPNowPlayingViewController *view = segue.destinationViewController;
+        view.jukebox = [jukeboxes objectAtIndex:selectedIndex];
+    }
 }
 
 - (IBAction)refreshButtonAction:(id)sender {

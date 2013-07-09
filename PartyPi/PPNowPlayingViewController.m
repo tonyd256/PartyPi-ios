@@ -21,6 +21,7 @@
     BOOL disliked;
     NSString *nowTrack;
     NSInteger volume;
+    BOOL admin;
 }
 
 @synthesize jukebox = _jukebox;
@@ -44,23 +45,31 @@
     [self.volumeDownButton setTitle:[NSString fontAwesomeIconStringForEnum:FAIconVolumeDown]];
     [self.volumeDownButton setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:kFontAwesomeFamilyName size:22]} forState:UIControlStateNormal];
     
+    [self.playlistBarButton setTitle:[NSString fontAwesomeIconStringForEnum:FAIconList]];
+    [self.playlistBarButton setTitleTextAttributes:@{UITextAttributeFont: [UIFont fontWithName:kFontAwesomeFamilyName size:22]} forState:UIControlStateNormal];
+    
     [self switchPlayPauseButton];
     
-    if ([[UIScreen mainScreen] bounds].size.height == 568) {
-        [self.userView setHidden:YES];
-    } else {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"admin"]) {
         [self.dislikeButton setHidden:YES];
         [self.playlistButton setHidden:YES];
+    } else {
+        [self.toolbar setHidden:YES];
     }
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [PPUDPClient sharedClient].delegate = self;
     [[PPUDPClient sharedClient] sendCommand:@"getStatus"];
+    [self becomeFirstResponder];
 }
 
--(void)dataReceived:(NSDictionary *)data {
+- (void)dataReceived:(NSDictionary *)data {
     if ([[data valueForKey:@"response"] isEqualToString:@"getStatus"]) {
         status = [data objectForKey:@"data"];
         [self updateStatus];
@@ -120,6 +129,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        ABPadLockScreenController *view = [[ABPadLockScreenController alloc] initWithDelegate:self];
+        view.pin = [self.jukebox valueForKey:@"pin"];
+        view.attemptLimit = 0;
+        view.title = @"Enter PIN";
+        view.subtitle = @"Enter PIN to gain admin privliges.";
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:view];
+        nav.modalPresentationStyle = UIModalPresentationFormSheet;        
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+}
+
+- (void)unlockWasSuccessful {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"admin"];
+    [defaults synchronize];
+    
+    [self.dislikeButton setHidden:YES];
+    [self.playlistButton setHidden:YES];
+    [self.toolbar setHidden:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)unlockWasCancelled {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)pauseButtonAction:(id)sender {

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PPUDPClient.h"
+#import "ABPadLockScreenController.h"
 
-@interface PPNowPlayingViewController : UIViewController <PPUDPClientDelegate>
+@interface PPNowPlayingViewController : UIViewController <PPUDPClientDelegate, ABLockScreenDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *trackImage;
 @property (strong, nonatomic) IBOutlet UILabel *trackTitle;
@@ -21,8 +22,8 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *pauseButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *playButton;
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (strong, nonatomic) IBOutlet UIView *userView;
 @property (strong, nonatomic) IBOutlet UIButton *playlistButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *playlistBarButton;
 
 @property (strong, nonatomic) NSDictionary *jukebox;
 
